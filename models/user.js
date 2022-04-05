@@ -14,6 +14,19 @@ const userSchema = new mongoose.Schema({
     required: true,
     default: 0,
   },
+
+  gender: {
+    type: String,
+    default: ""
+  },
+
+  email: {
+    type: String
+  },
+
+  address: {
+    type: String
+  }
 });
 
 module.exports = mongoose.model("User", userSchema);
