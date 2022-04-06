@@ -5,10 +5,24 @@ const userSchema = new mongoose.Schema({
   username: {
     type: String,
     required: true,
-    default: "unknown name",
     unique: true,
   },
 
+  firstName: {
+    type: String,
+    required: true,
+  },
+
+  lastName: {
+    type: String,
+    required: true,
+  },
+
+  password: {
+    type: String,
+    required: true,
+  },
+  
   age: {
     type: Number,
     required: true,
@@ -17,11 +31,13 @@ const userSchema = new mongoose.Schema({
 
   gender: {
     type: String,
-    default: ""
+    default: "", 
+    required: true,
   },
 
   email: {
-    type: String
+    type: String,
+    required: true,
   },
 
   address: {

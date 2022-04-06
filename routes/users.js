@@ -31,6 +31,9 @@ router.post("/createUser", async function (req, res, next) {
   const user = new User({
     username: req.body.username,
     age: req.body.age,
+    firstName: req.body.firstName,
+    lastName: req.body.lastName,
+    password: req.body.password,
     email: req.body.email,
     address: req.body.address,
     gender: req.body.gender
