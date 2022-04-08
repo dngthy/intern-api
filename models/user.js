@@ -42,7 +42,12 @@ const userSchema = new mongoose.Schema({
 
   address: {
     type: String
-  }
+  },
+
+  token: {
+    type: String
+  },
+
 });
 
 module.exports = mongoose.model("User", userSchema);

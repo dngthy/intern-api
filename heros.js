@@ -1,4 +1,4 @@
-//AUTH SERVICES
+//HEROS SERVICES
 
 require('dotenv').config();
 
@@ -15,16 +15,14 @@ mongoose.connect(MONGODB_URL, { useNewUrlParser: true });
 const db = mongoose.connection;
 db.on('error', (error) => console.error(error));
 db.once('open', () => console.log('Connected to Database'));
-//CORS
+
 app.use(cors());
-//Receive body request
 app.use(bodyParser.json());
 
-const usersRouter = require('./routes/users');
-//http://localhost:4000/users
-app.use('/users', usersRouter);
+const authRouter = require('./routes/heros');
+app.use('/heros', authRouter);
 
-const port = 4000;
+const port = 5000;
 app.listen(port, () => {
-  console.log(`Users repository service is listening on ${port}`);
+  console.log(`Auth service listening on port ${port}`);
 });
