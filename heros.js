@@ -9,7 +9,7 @@ var cors = require('cors');
 var bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 
-const MONGODB_URL = 'mongodb+srv://' + process.env.MONGODB_USERNAME + ':' + process.env.MONGODB_PASSWORD + '@lms.ebhxa.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
+const MONGODB_URL = 'mongodb+srv://' + process.env.MONGODB_USERNAME + ':' + process.env.MONGODB_PASSWORD + '@lms.ebhxa.mongodb.net/FirstDatabase?retryWrites=true&w=majority';
 mongoose.connect(MONGODB_URL, { useNewUrlParser: true });
 
 const db = mongoose.connection;

@@ -1,3 +1,4 @@
+const res = require('express/lib/response');
 const mongoose = require('mongoose');
 
 const heroSchema = new mongoose.Schema({
